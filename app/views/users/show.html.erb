@@ -1,0 +1,18 @@
+<div id="newForm">
+	<h1>Show</h1>
+	<fieldset class="inlineLabels">
+	<div class="ctrlHolder">
+	  <label>Name:</label>
+	  <%=h @user.name %>
+	</div>
+
+	<div class="ctrlHolder">
+	  <label>Email:</label>
+	  <%=h @user.email %>
+	</div>
+	</fieldset>
+
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
+
+</div>

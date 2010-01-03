@@ -1,0 +1,37 @@
+<div id="titleContainer">
+	<%= link_to (image_tag "kh-logo-header.png"), root_url %>
+	<div id="titleLinks">
+		<li>
+			<% if controller.action_name == "thefirm" %>
+				<ul>The Firm</ul>
+			<% else %>
+				<ul><%= link_to "The Firm", thefirm_url %></ul>
+			<% end %>
+			
+			<ul><%= image_tag "spacer_bullet.png" %></ul>
+			
+			<% if controller.action_name == "attorneys" %>
+				<ul>Attorneys</ul>
+			<% else %>
+				<ul><%= link_to "Attorneys", attorneys_url %></ul>
+			<% end %>
+			
+			<ul><%= image_tag "spacer_bullet.png" %></ul>
+			
+			<% if controller.action_name == "news" %>
+				<ul>News</ul>
+			<% else %>
+				<ul><%= link_to "News", news_entries_url %></ul>
+			<% end %>					
+			
+			<ul><%= image_tag "spacer_bullet.png" %></ul>
+			
+			<% if controller.action_name == "contact" %>
+				<ul>Contact</ul>
+			<% else %>
+				<ul><%= link_to "Contact", contact_url %></ul>
+			<% end %>		
+			
+		</li>
+	</div>	
+</div>

@@ -1,0 +1,35 @@
+<div id="tableDiv">
+	<h1>Manage Attorneys</h1>
+
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Role</th>
+	    <th>Biography</th>
+	    <th>Email</th>
+	    <th>Thumbnail</th>
+			<th class="adminCol">Edit</th>
+			<th class="adminCol">Destroy</th>
+	  </tr>
+
+	<% @attorneys.each do |attorney| %>
+	  <tr>
+	    <td><%=h attorney.name %></td>
+	    <td><%=h attorney.role %></td>
+	    <td><%= attorney.biography %></td>
+	    <td><%=h attorney.email %></td>
+	    <td><%=image_tag attorney.photo.url(:normal) %></td>
+	    <td class="adminCol"><%= link_to 'Edit', edit_attorney_path(attorney) %></td>
+	    <td class="adminCol"><%= link_to 'Destroy', attorney, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'Back to Admin', admin_url %> |
+	<%= link_to 'New attorney', new_attorney_path %> |
+	<%= link_to 'Logout', logout_path %>
+</div>
+
+

@@ -1,0 +1,2 @@
+module NewsEntriesHelper
+end

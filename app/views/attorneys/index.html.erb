@@ -1,0 +1,10 @@
+<div id="headlineText">
+<% @attorneys.each do |attorney| %>
+
+<%= link_to attorney.name, attorney %>, 
+<%= attorney.role %>, 
+<%= mail_to attorney.email, attorney.email, :class => 'email' %><br />
+
+<% end %>
+</div>
+

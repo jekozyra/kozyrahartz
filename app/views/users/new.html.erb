@@ -1,0 +1,33 @@
+<div id="newForm">
+
+	<h1>New User</h1>
+
+	<% form_for(@user) do |f| %>
+		<fieldset class="inlineLabels">
+		  <%= f.error_messages %>
+
+		  <div class="ctrlHolder">
+		    <%= f.label :name %>
+		    <%= f.text_field :name %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :email %>
+		    <%= f.text_field :email %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :password, 'Password' %>
+		    <%= f.password_field :password %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :password_confirmation, 'Confirm Password' %>
+		    <%= f.password_field :password_confirmation %>
+		  </div>
+		  <div class="buttonHolder">
+		    <%= f.submit 'Add User' %>
+		  </div>
+		</fieldset>
+	<% end %>
+
+<%= link_to 'Back', users_path %>
+
+</div>

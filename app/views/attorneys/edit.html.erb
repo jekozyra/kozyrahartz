@@ -1,0 +1,38 @@
+<div id="newForm">
+
+	<h1>Editing Attorney</h1>
+
+	<% form_for @attorney, :html => { :multipart => true } do |f| %>
+		<fieldset class="inlineLabels">
+		  <%= f.error_messages %>
+
+		  <div class="ctrlHolder">
+		    <%= f.label :name %>
+		    <%= f.text_field :name %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :role %>
+		    <%= f.text_field :role %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :biography %>
+		    <%= f.text_area :biography, :class => 'wysiwyg' %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :email %>
+		    <%= f.text_field :email %>
+		  </div>
+		  <div class="ctrlHolder">
+		    <%= f.label :photo %>
+		    <%= f.file_field :photo %>
+		  </div>		
+		  <div class="buttonHolder">
+		    <%= f.submit 'Update' %>
+		  </div>
+		</fieldset>
+	<% end %>
+
+	<%= link_to 'Back', attorneys_list_url %>
+
+</div>
+

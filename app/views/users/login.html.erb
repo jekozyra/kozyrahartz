@@ -1,0 +1,19 @@
+<div id="newForm">
+	<h1>Login</h1>
+
+	<% form_tag do %>
+		<fieldset class="inlineLabels">
+
+			<div class="ctrlHolder">
+				<label>Email</label><%= text_field_tag :email, params[:email] %>
+			</div>
+			<div class="ctrlHolder">
+				<label>Password</label><%= password_field_tag :password, params[:password] %>
+			</div>
+			<div class="buttonHolder">
+				<%= submit_tag "Login" %>
+			</div>
+
+		</fieldset>
+	<% end %>
+</div>
