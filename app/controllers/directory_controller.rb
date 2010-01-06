@@ -5,6 +5,7 @@ class DirectoryController < ApplicationController
   before_filter :authorize, :only => ['admin']
   
   def homepage
+    @attorneys = Attorney.find(:all)
     render :layout => "homepage_layout"
   end
   

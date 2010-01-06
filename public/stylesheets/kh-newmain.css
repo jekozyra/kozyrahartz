@@ -3,16 +3,94 @@ html, body { height: 100%; }
 * html #container { height: 100%; }
 body{background-color:#4B730D;}
 
-#logoDiv a{font-variant:small-caps; font-size:150%; color:#990000;}
-#logoDiv a:hover{color:#c00000;}
 
-#homepageContainer { min-height: 550px; background-color: #fff; width: 900px; margin: 20px auto; padding: 10px;}
-#homepageContainer { border-style: none; border-width: 5px; border-color: #000; font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;}
+#homepageContainer {
+	position: relative;
+	min-height: 550px; 
+	background-color: #fff; 
+	width: 900px; 
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: -40px; 
+/*	padding: 10px; */
+}
+#homepageContainer { 
+	border-style: none; 
+	border-width: 5px; 
+	border-color: #000; 
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
 
 #nav{
-	background-color:#fff;
+	background-color:#2C3940;
 	border-top-style: solid;
 	border-bottom-style: solid;
-	border-color: #000;
-	border-width: 2px;
+	border-color: #fff;
+	border-width: 1px;
+	padding-left: 10px;
+	height: 40px;
+}
+.dropdown {
+	padding-top: 5px;
+	float:left;
+	font-size: 12px;
+}
+.dropdown dt {
+/*	width:70px; */
+	margin-right: 20px;
+	padding:8px;
+	background-color: #2C3940;
+	color: #fff;
+}
+.dropdown dd {
+	position:absolute;
+	overflow:hidden;
+	width:150px;
+	display:none;
+	background:#fff;
+	z-index:200;
+	opacity:0
+}
+.dropdown ul {
+	width:150px;
+	list-style:none; 
+}
+.dropdown li {display:inline}
+.dropdown a {
+	display:block; 
+	padding:5px; 
+	color:#fff; 
+	text-decoration:none; 
+	background:#2C3940; 
+	width:150px
+}
+.dropdown a:hover {
+	text-decoration:underline;
+}
+
+
+#logoDiv {
+/*	font-variant:small-caps; */
+	font-size:150%; 
+	color:#990000;
+	background-color: #6d8d9e;
+	padding: 10px 20px;
+	height: 60px;
+}
+#logoDiv h1{
+	color: #fff;
+}
+
+#footerDiv{
+	position:relative;
+	bottom: -400px;
+	background-color: #2C3940;
+	min-height: 40px;
+	width: 100%;
+	color: #fff;
+}
+#footerText{
+	padding: 10px;
+	font-size: 10px;
 }
