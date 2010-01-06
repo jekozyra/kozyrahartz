@@ -1,0 +1,18 @@
+*{ padding: 0; margin: 0; }
+html, body { height: 100%; }
+* html #container { height: 100%; }
+body{background-color:#4B730D;}
+
+#logoDiv a{font-variant:small-caps; font-size:150%; color:#990000;}
+#logoDiv a:hover{color:#c00000;}
+
+#homepageContainer { min-height: 550px; background-color: #fff; width: 900px; margin: 20px auto; padding: 10px;}
+#homepageContainer { border-style: none; border-width: 5px; border-color: #000; font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;}
+
+#nav{
+	background-color:#fff;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: #000;
+	border-width: 2px;
+}
