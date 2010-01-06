@@ -35,7 +35,7 @@ body{background-color:#B8C2C8;}
 
 
 #nav{
-	background-color:#2C3940;
+	background-color:#192328;
 	border-top-style: solid;
 	border-bottom-style: solid;
 	border-color: #fff;
@@ -52,7 +52,8 @@ body{background-color:#B8C2C8;}
 /*	width:70px; */
 	margin-right: 20px;
 	padding:8px;
-	background-color: #2C3940;
+	margin-bottom: 3px;
+	background-color:#192328;
 	color: #fff;
 }
 .dropdown dd {
@@ -74,7 +75,7 @@ body{background-color:#B8C2C8;}
 	padding:5px; 
 	color:#fff; 
 	text-decoration:none; 
-	background:#2C3940; 
+	background:#192328; 
 	width:150px
 }
 .dropdown a:hover {
@@ -97,12 +98,12 @@ body{background-color:#B8C2C8;}
 #footerDiv{
 	position:relative;
 	bottom: -390px;
-	background-color: #2C3940;
+	background-color:#192328;
 	min-height: 40px;
 	width: 100%;
 	color: #fff;
 }
 #footerText{
-	padding: 10px;
+	padding: 12px;
 	font-size: 10px;
 }
