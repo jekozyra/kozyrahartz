@@ -44,7 +44,7 @@ function ddSlide(c,d){
   if(d == 1){
     dist = (Math.round((c.maxh - currh) / DDSPEED));
   }else{
-    dist = (Math.round(currh / DDSPEED));
+    dist = (Math.round(currh / DDSPEED))+1;
   }
   if(dist <= 1 && d == 1){
     dist = 1;
