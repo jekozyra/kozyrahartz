@@ -1,0 +1,34 @@
+<div id="nav">
+	<dl class="dropdown">
+	  <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">FIRM</dt>
+	  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+	    <ul>
+	      <li><a href="#">Overview</a></li>
+	      <li><a href="#">Principles</a></li>
+	    </ul>
+	  </dd>
+	</dl>
+
+	<dl class="dropdown">
+	  <dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">
+			ATTORNEYS
+		</dt>
+	  <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
+	    <ul>
+				<% @attorneys.each do |attorney| %>
+					<li><%= link_to attorney.name, attorney_url(attorney.short_name)%></li>
+				<% end %>
+	    </ul>
+	  </dd>
+	</dl>
+	
+	<dl class="dropdown">
+	  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
+			PRACTICE AREAS
+		</dt>
+	  <dd id="three-ddcontent" onmouseover="cancelHide('three')" onmouseout="ddMenu('three',-1)">
+	  </dd>
+	</dl>	
+	
+	<div style="clear:both"></div>
+</div>
