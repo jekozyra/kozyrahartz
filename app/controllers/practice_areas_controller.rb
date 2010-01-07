@@ -8,7 +8,7 @@ class PracticeAreasController < ApplicationController
     @practice_areas = PracticeArea.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :layout => "general_layout"} # index.html.erb
       format.xml  { render :xml => @practice_areas }
     end
   end
