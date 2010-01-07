@@ -6,12 +6,34 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" href="favicon.ico" />
 	<title>Kozyra & Hartz, LLC</title>
-	<%= stylesheet_link_tag "kh-newmain" %>
+	<%= stylesheet_link_tag "kh-general" %>
 	<%= javascript_include_tag "dropdown" %>
 	
 </head>
 
 <body>
 
+	<div id="wrapper">
+		<div id="logoDiv">
+			<%= link_to image_tag("kh-logo-small.png", :border => 0), root_url %>
+		</div>
+		<div id="navRow">
+			<div id="fillerCell">
+			</div>
+			<div id="nav">
+				<%= render :partial => 'shared/nav', :locals => {:attorneys => @attorneys_nav, :firms => @firms_nav, :practice_areas => @practice_areas_nav} %>
+			</div>
+		</div>
+		
+		<div id="mainDiv">
+			<div id="subnavCol">
+			</div>
+			<div id="mainCol">
+				<%= yield%>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+	</div>
 </body>
 </html>

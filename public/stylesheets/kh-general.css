@@ -1,0 +1,144 @@
+*{ padding: 0; margin: 0; }
+html, body { height: 100%; }
+
+#wrapper{
+	min-height:600px;
+	background-color:#998B00;
+	border-bottom-style: solid;
+	border-width:5px;
+	border-color:#192328;	
+}
+
+#logoDiv{
+	height:60px;
+	background-color: #fff;
+	border-bottom-style: solid;
+	border-width:5px;
+	border-color:#192328;
+}
+
+#logoDiv img{
+	padding-top: 14px;
+	padding-left:14px;
+}
+
+#navRow{
+	position:relative;
+	height:70px;
+	width:100%;
+	background-image:url('/images/books.jpg');
+	background-repeat: repeat-x;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#fillerCell{
+	position:absolute;
+	height:70px;
+	width:200px;
+	border-right-style:solid;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#nav{
+	position:relative;
+	left:auto;
+	bottom:-30px;
+	height:38px;
+	margin-left:202px;
+	width:auto;
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+	background-color:#6D8D9E;
+}
+
+#mainDiv{
+	height:100%;
+}
+
+#subnavCol{
+	min-height:463px;
+	position:absolute;
+	width:200px;
+	background-color: #da9552;
+	border-right-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#mainCol{
+	background-color:#fff;
+	position:relative;
+	left:auto;
+	margin-left:202px;
+	width:auto;
+	min-height:463px;
+	border-left-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff #e9c8a6;
+	border-width:2px 40px;
+}
+
+#footer{
+	clear:both;
+	width:100%;
+	min-width:100%;
+	height:40px;
+}
+
+.link-header{
+	background-color:#192328;
+	padding: 0px !important;
+	text-decoration: none !important;
+	margin: 0px !important;
+	width: auto !important;
+}
+.link-header a, a:hover;{
+	color:#da9552 !important;
+}
+.dropdown {
+	height:40px;
+	padding-top: 4px;
+	padding-left:5px;
+	float:left;
+	font-size: 12px;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+.dropdown dt {
+	margin-right: 20px;
+	padding:8px;
+	margin-bottom: 3px;
+	background-color:#6D8D9E;
+	color: #fff;
+}
+.dropdown dd {
+	position:absolute;
+	overflow:hidden;
+	width:150px;
+	display:none;
+	background:#fff;
+	z-index:200;
+	opacity:0.25;
+}
+.dropdown ul {
+	width:150px;
+	list-style:none; 
+}
+.dropdown li {display:inline}
+.dropdown a {
+	display:block; 
+	padding:5px; 
+	color:#fff; 
+	text-decoration:none; 
+	background:#6D8D9E;
+	width:150px
+}
+.dropdown a:hover {
+	text-decoration:underline;
+	color:#d49748;
+}

@@ -17,4 +17,10 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def nav
+    @attorneys_nav = Attorney.find(:all)
+    @firms_nav = Firm.find(:all)
+    @practice_areas_nav = PracticeArea.find(:all)
+  end
+  
 end

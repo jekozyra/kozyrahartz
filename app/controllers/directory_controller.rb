@@ -1,8 +1,7 @@
 class DirectoryController < ApplicationController
-  
-  layout 'main_layout'
-  
+    
   before_filter :authorize, :only => ['admin']
+  before_filter :nav
   
   def homepage
     @attorneys = Attorney.find(:all)
@@ -10,11 +9,9 @@ class DirectoryController < ApplicationController
     @practice_areas = PracticeArea.find(:all)
     render :layout => "homepage_layout"
   end
-  
-  def thefirm
-  end
-  
+
   def contact
+    render :layout => "general_layout"
   end
   
   def admin
@@ -22,6 +19,7 @@ class DirectoryController < ApplicationController
   end
   
   def credits
+    render :layout => "general_layout"
   end
   
 end

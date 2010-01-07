@@ -1,4 +1,4 @@
-var DDSPEED = 10;
+var DDSPEED = 2;
 var DDTIMER = 15;
 
 // main function to handle the mouse events //
