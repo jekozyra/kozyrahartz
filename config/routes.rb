@@ -1,18 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :practice_areas
+
   
   map.attorneys_list 'attorneys/attorneys_list', :controller => 'attorneys', :action => 'attorneys_list'
   map.news_list 'news_entries/news_list', :controller => 'news_entries', :action => 'news_list'
-  map.thefirm 'thefirm', :controller => 'directory', :action => 'thefirm'
   map.contact 'contact', :controller => 'directory', :action => 'contact'
   map.credits 'credits', :controller => 'directory', :action => 'credits'
   map.admin 'admin', :controller => 'directory', :action => 'admin'
   map.login 'login', :controller => 'users', :action => 'login'
   map.logout 'logout', :controller => 'users', :action => 'logout'
   
-  
   map.resources :news_entries
   map.resources :users
   map.resources :attorneys
+  map.resources :firms, :as => "firm"
   
   # The priority is based upon order of creation: first created -> highest priority.
 
