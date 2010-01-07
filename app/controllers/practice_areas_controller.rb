@@ -1,4 +1,7 @@
 class PracticeAreasController < ApplicationController
+  
+  before_filter :nav, :only => ['show']
+  
   # GET /practice_areas
   # GET /practice_areas.xml
   def index
@@ -16,7 +19,7 @@ class PracticeAreasController < ApplicationController
     @practice_area = PracticeArea.find_by_url(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "general_layout"} # show.html.erb
       format.xml  { render :xml => @practice_area }
     end
   end

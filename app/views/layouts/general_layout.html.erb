@@ -27,13 +27,46 @@
 		
 		<div id="mainDiv">
 			<div id="subnavCol">
+				<% if @controller.controller_name == "attorneys" %>
+					<h3>Attorneys</h3>
+					<ul>
+					<% @attorneys_nav.each do |attorney| %>
+						<li><%= link_to attorney.name, attorney_url(attorney.short_name)%></li>
+					<% end %>
+					</ul>
+				<% elsif @controller.controller_name == "firms"%>
+					<h3>Firm</h3>
+					<ul>
+					<% @firms_nav.each do |firm| %>
+						<li><%= link_to firm.title, firm_url(firm.url)%></li>
+					<% end %>
+					</ul>				
+				<% elsif @controller.controller_name == "practice_areas" %>
+					<h3>Practice Areas</h3>
+					<ul>
+					<% @practice_areas_nav.each do |practice_area| %>
+						<li><%= link_to practice_area.name, practice_area_url(practice_area.url)%></li>
+					<% end %>
+					</ul>			
+				<% end %>
 			</div>
 			<div id="mainCol">
-				<%= yield%>
+				<div id="bodyText">
+					<%= yield%>
+				</div>
 			</div>
 		</div>
 	</div>
+
 	<div id="footer">
+		<div id="footerTextLeft">
+			&copy; 2010 Kozyra & Hartz, LLC
+		</div>
+		<div id="footerTextRight">
+			<%= link_to "home", root_url %>&nbsp;:
+			<%= link_to "site map", root_url %>&nbsp;:
+			<%= link_to "credits", credits_url %>
+		</div>
 	</div>
 </body>
 </html>

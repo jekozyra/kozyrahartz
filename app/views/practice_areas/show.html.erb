@@ -1,14 +1,2 @@
-<p>
-  <b>Name:</b>
-  <%=h @practice_area.name %>
-</p>
-
-<p>
-  <b>Information:</b>
-  <%=h @practice_area.information %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_practice_area_path(@practice_area) %> |
-<%= link_to 'Back', practice_areas_path %>
+<h2><%= @practice_area.name %></h2>
+<p><%= @practice_area.information %></p>

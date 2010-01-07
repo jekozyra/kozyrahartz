@@ -3,6 +3,7 @@ class AttorneysController < ApplicationController
   layout 'admin_layout'
   
   before_filter :authorize, :except => ['index', 'show']
+  before_filter :nav, :only => ['index', 'show']
   
   # GET /attorneys
   # GET /attorneys.xml
@@ -10,7 +11,7 @@ class AttorneysController < ApplicationController
     @attorneys = Attorney.all
 
     respond_to do |format|
-      format.html {render :layout => 'main_layout' }# index.html.erb
+      format.html {render :layout => 'general_layout' }# index.html.erb
       format.xml  { render :xml => @attorneys }
     end
   end
@@ -30,7 +31,7 @@ class AttorneysController < ApplicationController
     @attorney = Attorney.find_by_short_name(params[:id])
 
     respond_to do |format|
-      format.html { render :layout => 'main_layout' } # show.html.erb
+      format.html { render :layout => 'general_layout' } # show.html.erb
       format.xml  { render :xml => @attorney }
     end
   end

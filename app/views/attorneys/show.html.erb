@@ -1,10 +1,7 @@
-<div id="headlineText">
-
 <h2><%= @attorney.name %></h2>
 
-<p>
-  <%= @attorney.role %><br /><%= mail_to @attorney.email, @attorney.email, :class => 'email' %>
-</p>
+<p><%= @attorney.role %></p>
+<p><%= mail_to @attorney.email, @attorney.email, :class => 'email' %></p>
 
 
 <p>
@@ -13,7 +10,4 @@
 
 <div id="attorneyBio">
   <%= @attorney.biography %>
-</div>
-
-<%= link_to 'Back', attorneys_path %>
 </div>

@@ -1,11 +1,14 @@
 class FirmsController < ApplicationController
+  
+  before_filter :nav, :only => ['index','show']
+  
   # GET /firms
   # GET /firms.xml
   def index
     @firms = Firm.all
-
+    @overview = Firm.find_by_url("overview")
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :layout => "general_layout"} # index.html.erb
       format.xml  { render :xml => @firms }
     end
   end
@@ -16,7 +19,7 @@ class FirmsController < ApplicationController
     @firm = Firm.find_by_url(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "general_layout"} # show.html.erb
       format.xml  { render :xml => @firm }
     end
   end

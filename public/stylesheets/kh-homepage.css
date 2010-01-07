@@ -48,7 +48,7 @@ body{background-color:#B8C2C8;}
 	width: auto !important;
 }
 .link-header a, a:hover;{
-	color:#d49748 !important;
+	color:#da9552 !important;
 }
 .dropdown {
 	padding-top: 5px;
@@ -86,7 +86,7 @@ body{background-color:#B8C2C8;}
 }
 .dropdown a:hover {
 	text-decoration:underline;
-	color:#d49748;
+	color:#da9552;
 }
 
 
@@ -147,7 +147,7 @@ body{background-color:#B8C2C8;}
 }
 #footerTextRight a{
 	text-decoration: none;
-	color:#d49748;
+	color:#da9552;
 }
 #footerTextRight a:hover {
 	color:#fff;
