@@ -1,6 +1,6 @@
 class PracticeAreasController < ApplicationController
   
-  before_filter :nav, :only => ['show']
+  before_filter :nav, :only => ['index','show']
   
   # GET /practice_areas
   # GET /practice_areas.xml

@@ -14,9 +14,9 @@
 	  <tr>
 	    <td><%=h user.name %></td>
 	    <td><%=h user.email %></td>
-	    <td class="adminCol"><%= link_to 'Show', user %></td>
-	    <td class="adminCol"><%= link_to 'Edit', edit_user_path(user) %></td>
-	    <td class="adminCol"><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+	    <td class="adminCol"><%= link_to 'Show', admin_user_path(user) %></td>
+	    <td class="adminCol"><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+	    <td class="adminCol"><%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
 	  </tr>
 	<% end %>
 	</table>
@@ -24,7 +24,7 @@
 	<br />
 
 	<%= link_to 'Back to Admin', admin_url %> |
-	<%= link_to 'New user', new_user_path %> | 
+	<%= link_to 'New user', new_admin_user_path %> | 
 	<%= link_to 'Logout', logout_path %>
 
 </div>

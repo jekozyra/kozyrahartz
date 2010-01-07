@@ -1,6 +1,7 @@
 class FirmsController < ApplicationController
   
   before_filter :nav, :only => ['index','show']
+  before_filter :authorize, :except => ['index', 'show']
   
   # GET /firms
   # GET /firms.xml
@@ -89,6 +90,12 @@ class FirmsController < ApplicationController
     end
   end
   
+    # GET /attorneys
+  # GET /attorneys.xml
+  def firm_list
+    @firms = Firm.all
+
+  end
   
   
 end

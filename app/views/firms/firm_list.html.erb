@@ -1,0 +1,29 @@
+<div id="tableDiv">
+	<h1>Manage Firm Information</h1>
+
+	<table>
+	  <tr>
+	    <th>Title</th>
+	    <th>Information</th>
+			<th class="adminCol">Edit</th>
+			<th class="adminCol">Destroy</th>
+	  </tr>
+
+	<% @firms.each do |firm| %>
+	  <tr>
+	    <td><%=h firm.title %></td>
+	    <td><%= firm.information %></td>
+	    <td class="adminCol"><%= link_to 'Edit', edit_firm_path(firm) %></td>
+	    <td class="adminCol"><%= link_to 'Destroy', firm, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'Back to Admin', admin_url %> |
+	<%= link_to 'New attorney', new_attorney_path %> |
+	<%= link_to 'Logout', logout_path %>
+</div>
+
+

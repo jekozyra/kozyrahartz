@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     unless User.find_by_id(session[:user_id])
       session[:original_uri] = request.request_uri
       flash[:notice] = "Please log in!"
-      redirect_to :controller => 'users', :action => 'login'
+      redirect_to :controller => 'admin/users', :action => 'login'
     end
   end
   
