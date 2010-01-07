@@ -22,6 +22,17 @@
 			<% end %>
 		
 			<%= yield %>
+			
+			<div id="footerDiv">
+				<div id="footerTextLeft">
+					&copy; 2010 Kozyra & Hartz, LLC
+				</div>
+				<div id="footerTextRight">
+					<%= link_to "home", root_url %>&nbsp;:
+					<%= link_to "site map", root_url %>&nbsp;:
+					<%= link_to "credits", credits_url %>
+				</div>
+			</div>
 
 		</div>
 		<div id="shadow">

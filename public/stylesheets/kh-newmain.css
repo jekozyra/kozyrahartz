@@ -137,16 +137,19 @@ body{background-color:#B8C2C8;}
 }
 #footerTextLeft{
 	float: left;
-	padding: 12px;
+	padding: 14px;
 	font-size: 10px;
 }
 #footerTextRight{
 	float: right;
-	padding: 12px;
+	padding: 14px;
 	font-size: 10px;
 }
 #footerTextRight a{
 	text-decoration: none;
 	color:#d49748;
+}
+#footerTextRight a:hover {
+	color:#fff;
 }
 

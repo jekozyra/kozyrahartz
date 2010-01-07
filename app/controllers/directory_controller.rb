@@ -19,4 +19,7 @@ class DirectoryController < ApplicationController
     render :layout => "admin_layout"
   end
   
+  def credits
+  end
+  
 end

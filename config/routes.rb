@@ -4,9 +4,11 @@ ActionController::Routing::Routes.draw do |map|
   map.news_list 'news_entries/news_list', :controller => 'news_entries', :action => 'news_list'
   map.thefirm 'thefirm', :controller => 'directory', :action => 'thefirm'
   map.contact 'contact', :controller => 'directory', :action => 'contact'
+  map.credits 'credits', :controller => 'directory', :action => 'credits'
   map.admin 'admin', :controller => 'directory', :action => 'admin'
   map.login 'login', :controller => 'users', :action => 'login'
   map.logout 'logout', :controller => 'users', :action => 'logout'
+  
   
   map.resources :news_entries
   map.resources :users
