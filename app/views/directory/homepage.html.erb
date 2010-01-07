@@ -1,5 +1,5 @@
 <div id="logoDiv" >
-	<h1>Kozyra|Hartz</h1>
+	<%= image_tag "kh-logo.png" %>
 </div>
 
 <%= render :partial => "navmenu" %>
@@ -27,7 +27,10 @@
 </div>
 
 <div id="footerDiv">
-	<div id="footerText">
-	&copy; 2010 Kozyra & Hartz, LLC
+	<div id="footerTextLeft">
+		&copy; 2010 Kozyra & Hartz, LLC
+	</div>
+	<div id="footerTextRight">
+		<%= link_to "home", root_url %>
 	</div>
 </div>
