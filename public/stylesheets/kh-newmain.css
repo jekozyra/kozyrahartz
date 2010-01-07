@@ -86,6 +86,7 @@ body{background-color:#B8C2C8;}
 }
 .dropdown a:hover {
 	text-decoration:underline;
+	color:#d49748;
 }
 
 
@@ -125,7 +126,7 @@ body{background-color:#B8C2C8;}
 	color: #fff;
 }
 #logoDiv img{
-	padding-top: 18px;
+	padding-top: 20px;
 }
 
 #footerDiv{
