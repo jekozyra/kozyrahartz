@@ -5,7 +5,7 @@ body{background-color:#B8C2C8;}
 
 #wrapper{
 	position: relative;
-	height: 560px; 
+	height: 563px; 
 	background-color: #fff; 
 	width: 910px; 
 	margin: auto;
@@ -27,7 +27,10 @@ body{background-color:#B8C2C8;}
 	border-color: #000; 
 	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
 }
-
+#shadow{
+	position:relative;
+	bottom:-552px;
+}
 
 
 #nav{
