@@ -1,12 +1,13 @@
 <div id="nav">
 	<dl class="dropdown">
 	  <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
-			FIRM
+			<%= link_to "FIRM", firms_url, :class => "link-header" %>
 		</dt>
 	  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
 	    <ul>
-	      <li><a href="#">Overview</a></li>
-	      <li><a href="#">Principles</a></li>
+				<% @firms.each do |firm| %>
+					<li><%= link_to firm.title, firm_url(firm.url)%></li>
+				<% end %>
 	    </ul>
 	  </dd>
 	</dl>
@@ -26,9 +27,14 @@
 	
 	<dl class="dropdown">
 	  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
-			PRACTICE AREAS
+			<%= link_to "PRACTICE AREAS", practice_areas_url, :class => "link-header" %>
 		</dt>
 	  <dd id="three-ddcontent" onmouseover="cancelHide('three')" onmouseout="ddMenu('three',-1)">
+	    <ul>
+				<% @practice_areas.each do |practice_area| %>
+					<li><%= link_to practice_area.name, practice_area_url(practice_area.url)%></li>
+				<% end %>
+	    </ul>
 	  </dd>
 	</dl>	
 	

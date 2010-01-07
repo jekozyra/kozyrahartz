@@ -1,0 +1,23 @@
+<h1>Listing practice_areas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Information</th>
+    <th>Url</th>
+  </tr>
+
+<% @practice_areas.each do |practice_area| %>
+  <tr>
+    <td><%=h practice_area.name %></td>
+    <td><%=h practice_area.information %></td>
+    <td><%= link_to 'Show', practice_area %></td>
+    <td><%= link_to 'Edit', edit_practice_area_path(practice_area) %></td>
+    <td><%= link_to 'Destroy', practice_area, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New practice_area', new_practice_area_path %>
