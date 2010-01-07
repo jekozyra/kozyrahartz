@@ -1,19 +1,31 @@
-<h1>New news_entry</h1>
+<div id="newForm">
+
+<h1>New News Entry</h1>
 
 <% form_for(@news_entry) do |f| %>
-  <%= f.error_messages %>
+	<fieldset class="inlineLabels">
+		
+	  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :entry %><br />
-    <%= f.text_area :entry %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+	  <div class="ctrlHolder">
+	    <%= f.label :title %>
+	    <%= f.text_field :title %>
+	  </div>
+		<div class="ctrlHolder">
+	    <%= f.label :date %>
+	    <%= f.date_select :date, :order => [:month, :day, :year] %>
+	  </div>
+	  <div class="ctrlHolder">
+	    <%= f.label :entry %>
+	    <%= f.text_area :entry, :class => 'wysiwyg' %>
+	  </div>
+	  <div class="buttonHolder">
+	    <%= f.submit 'Create' %>
+	  </div>
+
+	</fieldset>
 <% end %>
 
 <%= link_to 'Back', news_entries_path %>
+
+</div>

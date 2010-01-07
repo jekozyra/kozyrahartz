@@ -1,5 +1,7 @@
 class FirmsController < ApplicationController
   
+  layout 'admin_layout'
+  
   before_filter :nav, :only => ['index','show']
   before_filter :authorize, :except => ['index', 'show']
   
@@ -49,8 +51,8 @@ class FirmsController < ApplicationController
 
     respond_to do |format|
       if @firm.save
-        flash[:notice] = 'Firm was successfully created.'
-        format.html { redirect_to(@firm) }
+        flash[:notice] = 'Firm info was successfully created.'
+        format.html { redirect_to(firm_list_url) }
         format.xml  { render :xml => @firm, :status => :created, :location => @firm }
       else
         format.html { render :action => "new" }
@@ -68,8 +70,8 @@ class FirmsController < ApplicationController
     end    
     respond_to do |format|
       if @firm.update_attributes(params[:firm])
-        flash[:notice] = 'Firm was successfully updated.'
-        format.html { redirect_to(@firm) }
+        flash[:notice] = 'Firm info was successfully updated.'
+        format.html { redirect_to(firm_list_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

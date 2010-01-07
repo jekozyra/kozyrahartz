@@ -1,19 +1,27 @@
-<h1>New firm</h1>
+<div id="newForm">
 
-<% form_for(@firm) do |f| %>
-  <%= f.error_messages %>
+	<h1>New Firm</h1>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :information %><br />
-    <%= f.text_area :information %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+	<% form_for(@firm) do |f| %>
+		<fieldset class="inlineLabels">
+	
+	  <%= f.error_messages %>
 
-<%= link_to 'Back', firms_path %>
+	  <div class="ctrlHolder">
+	    <%= f.label :title %>
+	    <%= f.text_field :title %>
+	  </div>
+	  <div class="ctrlHolder">
+	    <%= f.label :information %>
+	    <%= f.text_area :information, :class => 'wysiwyg' %>
+	  </div>
+	  <div class="buttonHolder">
+	    <%= f.submit 'Update' %>
+	  </div>
+	
+		</fieldset>
+	<% end %>
+
+	<%= link_to 'Back', firm_list_path %>
+
+</div>

@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Kozyra & Hartz, LLC: Admin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Kozyra &amp; Hartz, LLC: Admin</title>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<%= javascript_include_tag "jquery.wysiwyg.js" %>
 	<script type="text/javascript"> jQuery(function() { jQuery(".wysiwyg").wysiwyg(); }); </script>
@@ -13,15 +13,41 @@
 </head>
 
 <body>
-	<div id="container">
 		<% if flash[:warning] or flash[:notice] %>
 		  <div id="flash">
 				<h3><%= flash[:notice] %></h3>
 			</div>
 		<% end %>
+	<div id="wrapper">
+		<div id="logoDiv">
+			<h1><%= link_to image_tag("kh-logo-small.png", :border => 0), root_url %>&nbsp;Admin</h1>
+		</div>
+		<div id="navRow">
+			<div id="fillerCell">
+			</div>
+			<div id="nav">
+				<%= render :partial => "shared/admin_nav"%>
+			</div>
+		</div>
 		
-		<%= yield %>
+		<div id="mainDiv">
 
+				<div id="bodyText">
+					<%= yield%>
+				</div>
+			
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="footerTextLeft">
+			&copy; 2010 Kozyra &amp; Hartz, LLC
+		</div>
+		<div id="footerTextRight">
+			<%= link_to "home", root_url %>&nbsp;:
+			<%= link_to "site map", root_url %>&nbsp;:
+			<%= link_to "credits", credits_url %>
+		</div>
 	</div>
 </body>
 </html>

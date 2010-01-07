@@ -1,0 +1,34 @@
+<dl class="dropdown">
+  <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
+		<%= link_to "Manage Firm Information", firm_list_url, :class => "link-header" %>
+	</dt>
+  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+
+  </dd>
+</dl>
+
+<dl class="dropdown">
+  <dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">
+		<%= link_to "Manage Attorneys", attorneys_list_url, :class => "link-header" %>
+	</dt>
+</dl>
+
+<dl class="dropdown">
+  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
+		<%= link_to "Manage Users", admin_users_url, :class => "link-header" %>
+	</dt>
+</dl>	
+
+<dl class="dropdown">
+  <dt id="four-ddheader" onmouseover="ddMenu('four',1)" onmouseout="ddMenu('four',-1)">
+		<%= link_to "Manage Practice Areas", practice_areas_list_url, :class => "link-header" %>
+	</dt>
+</dl>
+
+<dl class="dropdown">
+  <dt id="five-ddheader" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">
+		<%= link_to "Manage News Items", news_list_url, :class => "link-header" %>
+	</dt>
+</dl>	
+
+<div style="clear:both"></div>

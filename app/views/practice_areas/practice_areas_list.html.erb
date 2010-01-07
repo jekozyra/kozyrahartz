@@ -1,0 +1,35 @@
+<div id="tableDiv">
+
+	<h1>Manage Practice Areas</h1>
+
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Information</th>
+	    <th>Edit</th>
+	    <th>Destroy</th>
+	  </tr>
+
+	<% @practice_areas.each do |practice_area| %>
+	  <tr>
+	    <td><%=h practice_area.name %></td>
+	    <td><%=h practice_area.information %></td>
+	    <td><%= link_to 'Edit', edit_practice_area_path(practice_area) %></td>
+	    <td><%= link_to 'Destroy', practice_area, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+</div>
+
+<div id="bodyTextFooter">
+	<div id="bodyTextFooterLeft">
+		<%= link_to '+ Add a Practice Area', new_practice_area_path %>
+	</div>
+	<div id="bodyTextFooterRight">
+		<%= link_to 'Back to Admin', admin_url %> |
+		<%= link_to 'Logout', logout_path %>
+	</div>
+</div>
+
+<div style="clear:both"></div>

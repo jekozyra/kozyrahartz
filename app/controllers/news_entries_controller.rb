@@ -10,7 +10,7 @@ class NewsEntriesController < ApplicationController
     @news_entries = NewsEntry.all
 
     respond_to do |format|
-      format.html { render :layout => 'main_layout' } # index.html.erb
+      format.html { render :layout => 'general_layout' } # index.html.erb
       format.xml  { render :xml => @news_entries }
     end
   end
@@ -21,7 +21,7 @@ class NewsEntriesController < ApplicationController
     @news_entry = NewsEntry.find(params[:id])
 
     respond_to do |format|
-      format.html { render :layout => 'main_layout' } # show.html.erb
+      format.html { render :layout => 'general_layout' } # show.html.erb
       format.xml  { render :xml => @news_entry }
     end
   end
@@ -49,8 +49,8 @@ class NewsEntriesController < ApplicationController
 
     respond_to do |format|
       if @news_entry.save
-        flash[:notice] = 'NewsEntry was successfully created.'
-        format.html { redirect_to(@news_entry) }
+        flash[:notice] = 'News Item was successfully created.'
+        format.html { redirect_to(news_list_url) }
         format.xml  { render :xml => @news_entry, :status => :created, :location => @news_entry }
       else
         format.html { render :action => "new" }
@@ -66,8 +66,8 @@ class NewsEntriesController < ApplicationController
 
     respond_to do |format|
       if @news_entry.update_attributes(params[:news_entry])
-        flash[:notice] = 'NewsEntry was successfully updated.'
-        format.html { redirect_to(@news_entry) }
+        flash[:notice] = 'News Item was successfully updated.'
+        format.html { redirect_to(news_list_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

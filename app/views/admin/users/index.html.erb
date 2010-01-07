@@ -1,11 +1,10 @@
 <div id="tableDiv">
-	<h1>Listing Users</h1>
+	<h1>Manage Users</h1>
 
 	<table>
 	  <tr>
 	    <th>Name</th>
 	    <th>Email</th>
-			<th class="adminCol">Show</th>
 			<th class="adminCol">Edit</th>
 			<th class="adminCol">Destroy</th>
 	  </tr>
@@ -14,18 +13,18 @@
 	  <tr>
 	    <td><%=h user.name %></td>
 	    <td><%=h user.email %></td>
-	    <td class="adminCol"><%= link_to 'Show', admin_user_path(user) %></td>
 	    <td class="adminCol"><%= link_to 'Edit', edit_admin_user_path(user) %></td>
 	    <td class="adminCol"><%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
 	  </tr>
 	<% end %>
 	</table>
 
-	<br />
-
-	<%= link_to 'Back to Admin', admin_url %> |
-	<%= link_to 'New user', new_admin_user_path %> | 
-	<%= link_to 'Logout', logout_path %>
-
 </div>
 
+<span id="bodyTextFooterLeft">
+	<%= link_to '+ Add a new user', new_admin_user_path %>
+</span>
+<span id="bodyTextFooterRight">
+	<%= link_to 'Back to Admin', admin_url %> |
+	<%= link_to 'Logout', logout_path %>
+</span>

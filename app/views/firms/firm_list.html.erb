@@ -19,11 +19,17 @@
 	<% end %>
 	</table>
 
-	<br />
-
-	<%= link_to 'Back to Admin', admin_url %> |
-	<%= link_to 'New attorney', new_attorney_path %> |
-	<%= link_to 'Logout', logout_path %>
 </div>
 
+<div id="bodyTextFooter">
+	<div id="bodyTextFooterLeft">
+		<%= link_to '+ Add more firm information', new_firm_path %></span>
+	</div>
+	<div id="bodyTextFooterRight">
+		<%= link_to 'Back to Admin', admin_url %> |
+		<%= link_to 'Logout', logout_path %>
+	</div>
+</div>
+
+<div style="clear:both"></div>
 

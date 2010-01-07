@@ -1,5 +1,7 @@
 class PracticeAreasController < ApplicationController
   
+  layout 'admin_layout'
+
   before_filter :nav, :only => ['index','show']
   
   # GET /practice_areas
@@ -48,8 +50,8 @@ class PracticeAreasController < ApplicationController
 
     respond_to do |format|
       if @practice_area.save
-        flash[:notice] = 'PracticeArea was successfully created.'
-        format.html { redirect_to(@practice_area) }
+        flash[:notice] = 'Practice Area was successfully created.'
+        format.html { redirect_to(@practice_areas_list) }
         format.xml  { render :xml => @practice_area, :status => :created, :location => @practice_area }
       else
         format.html { render :action => "new" }
@@ -68,8 +70,8 @@ class PracticeAreasController < ApplicationController
 
     respond_to do |format|
       if @practice_area.update_attributes(params[:practice_area])
-        flash[:notice] = 'PracticeArea was successfully updated.'
-        format.html { redirect_to(@practice_area) }
+        flash[:notice] = 'Practice Area was successfully updated.'
+        format.html { redirect_to(practice_areas_list) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -89,4 +91,9 @@ class PracticeAreasController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def practice_areas_list
+    @practice_areas = PracticeArea.all
+  end
+  
 end

@@ -1,40 +1,252 @@
-/*
-
-K&H COLOUR SCHEME by Jillian Kozyra
-Light Cyan Background: #d5edf4
-Dark Red Lettering: #990000
-Dark tan: #595646
-Light tan: #dfdac7
-
-*/
-
-
 *{ padding: 0; margin: 0; }
-html, body { height: 100%; }
-* html { height: 100%; }
-#container { min-height: 100%; background-color: #fff; width: 950px; margin: 0 auto; padding: 10px;}
-body{background-color:#09213b;}
-body,p,ol,td{font-size:13px; line-height:18px;}
-body {font-size: small; font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;margin: 0 auto;}
+html, body { 
+	height: 100%;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
 
-h1{font-size:2em; color:#990000; padding:15px; clear:left; font-variant:small-caps;}
-h2,h3,h4{color:#cc3300;}
-h1+a{margin:10px 0 10px 25px !important; background-color:inherit !important; font-variant:small-caps;}
+#wrapper{
+	min-height:600px;
+	background-color:#998B00;
+}
 
-pre{background-color:#eee; padding:10px; font-size:11px;}
-a {text-decoration: none; color: #2c7c9f;}
-a:visited {color: #244a58;}
-a:hover{color:#4083cf;}
-.fieldWithErrors{padding:1px;background-color:red;display:table;}
-img {border-style: none;}
+#logoDiv{
+	height:60px;
+	background-color: #fff;
+	border-bottom-style: solid;
+	border-width:5px;
+	border-color:#192328;
+}
+
+#logoDiv img{
+	padding-top: 14px;
+	padding-left:14px;
+}
+
+#logoDiv h1{
+	font-weight:normal;
+	font-variant:small-caps;
+	color:#4D636F;
+	font-size:220%;
+}
+
+#navRow{
+	position:relative;
+	height:70px;
+	width:100%;
+	background-image:url('/images/books.jpg');
+	background-repeat: repeat-x;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#fillerCell{
+	position:absolute;
+	height:70px;
+	width:40px;
+	border-right-style:solid;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#nav{
+	position:relative;
+	left:auto;
+	bottom:-30px;
+	height:38px;
+	margin-left:42px;
+	width:auto;
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+	background-color:#6D8D9E;
+}
+
+#mainDiv{
+	min-height:463px;
+	background-color:#fff;
+	height:100%;
+	border-left-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff #e9c8a6;
+	border-width:2px 40px;	
+}
+
+#subnavCol{
+	min-height:463px;
+	position:absolute;
+	width:200px;
+	background-color: #da9552;
+	border-right-style:solid;
+	border-bottom-style:solid;
+	border-color:#fff;
+	border-width:2px;
+	list-style:square;
+}
+
+#subnavCol h3{
+	margin-top:20px;
+	margin-left:25px;
+	color:#fff;
+	font-variant:small-caps;
+	font-size:90%;
+}
+#subnavCol ul{
+	color: #fff;
+	list-style:square;
+	margin-top:5px;
+	margin-left:37px;
+	font-size:75%;
+}
+#subnavCol a{
+	color: #fff;
+	text-decoration:none;
+}
+#subnavCol a:hover{
+	text-decoration:underline;
+}
+
+#mainCol{
+	background-color:#fff;
+	position:relative;
+	left:auto;
+	width:auto;
+	min-height:463px;
+}
+
+#bodyText{
+	padding-left:10px;
+	padding-top:10px;
+}
+
+#bodyText h1, h2{
+	font-variant: small-caps;
+	font-weight:normal;
+	margin-bottom:5px;
+}
+
+#bodyText p{
+	font-size:13px;
+	padding:2px;
+}
+
+#bodyText a{
+	text-decoration:none;
+	color:#20323b;
+}
+#bodyText a:hover{
+	text-decoration:none;
+	color:#da9552;
+}
+
+#bodyTextFooter{
+	clear:both;
+	border-left-style:solid;
+	border-color:#e9c8a6;
+	border-width:40px;	
+}
+#bodyTextFooterLeft{
+	font-size:14px;
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	padding-bottom:10px;
+}
+#bodyTextFooterRight{
+	font-size:14px;
+	float:right;
+	margin-right:10px;
+	margin-top:10px;
+	padding-bottom:10px;
+}
+
+#footer{
+	clear:both;
+	width:100%;
+	min-width:100%;
+	height:40px;
+	border-top-style: solid;
+	border-width:5px;
+	border-color:#192328;	
+}
+
+#footerTextLeft{
+	float: left;
+	padding: 14px;
+	font-size: 10px;
+}
+#footerTextRight{
+	float: right;
+	padding: 14px;
+	font-size: 10px;
+}
+#footerTextRight a{
+	text-decoration: none;
+	color:#da9552;
+}
+#footerTextRight a:hover {
+	color:#fff;
+}
+.link-header{
+	background-color:#192328;
+	padding: 0px !important;
+	text-decoration: none !important;
+	margin: 0px !important;
+	width: auto !important;
+}
+.link-header a, a:hover;{
+	color:#da9552 !important;
+}
+.dropdown {
+	height:40px;
+	padding-top: 4px;
+	padding-left:5px;
+	float:left;
+	font-size: 12px;
+}
+.dropdown dt {
+	margin-right: 20px;
+	padding:8px;
+	margin-bottom: 3px;
+	background-color:#6D8D9E;
+	color: #fff;
+}
+.dropdown dd {
+	position:absolute;
+	overflow:hidden;
+	width:150px;
+	display:none;
+	background:#fff;
+	z-index:200;
+	opacity:0.25;
+}
+.dropdown ul {
+	width:150px;
+	list-style:none; 
+}
+.dropdown li {display:inline}
+.dropdown a {
+	display:block; 
+	padding:5px; 
+	color:#fff; 
+	text-decoration:none; 
+	background:#6D8D9E;
+	width:150px
+}
+.dropdown a:hover {
+	text-decoration:underline;
+	color:#d49748;
+}
+
 
 
 /*================ for tables ======================*/
-#tableDiv{margin:0 auto;width:90%;}
+#tableDiv{margin:0 auto;width:90%;margin-bottom:5px;}
 #tableDiv h1{padding:10px 0pt 25px 0;}
 #tableDiv label+input{width:49.3%;}
-#tableDiv h1 {padding-bottom:15px;}
-.adminCol {width: 50px} 
+#tableDiv h1 {padding-bottom:15px;font-size:150%;}
+.adminCol {width: 50px;} 
 
 table,td{font: 12px Verdana,Geneva,Arial,Helvetica,sans-serif;}
 table{width:100%; border-collapse:collapse; margin:0; float:inherit;}
@@ -50,7 +262,7 @@ fieldset{border:none;margin:0;padding:0;}
 fieldset legend{margin:0;padding:0;}
 
 #newForm{margin:0 auto;width:90%;}
-#newForm h1{padding:40px 0pt 25px 0;}
+#newForm h1{padding-top:25px;}
 #newForm label+input{width:49.3%;}
 #newForm ul{font-size: 20px; line-height: 24px; list-style: none; margin: 10px 0px;}
 #newForm li{}
@@ -63,7 +275,7 @@ fieldset legend{margin:0;padding:0;}
 #errorExplanation p{color:#333;margin-bottom:0;padding:5px;}
 #errorExplanation ul li{font-size:12px;list-style-type:none;}
 
-fieldset{margin:1em 0;border-bottom:1px solid #d9d7ac;border-top:1px solid #d9d7ac;}
+fieldset{margin:1em 0;border-bottom:1px solid #d9d7ac;border-top:1px solid #d9d7ac;margin-top:0px;}
 fieldset legend{font-size:150%;font-family:inherit;color:#14212b;}
 
 .ctrlHolder{overflow:hidden;margin:0;padding:0;clear:both;display:block;}
