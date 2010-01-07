@@ -12,20 +12,21 @@
 
 <body>
 	<div id="wrapper">
-	<div id="homepageContainer">
-		<!-- only render this div if there's something to show -->
-		<% if flash[:warning] or flash[:notice] %>
-		  <div id="flash">
-				<h3><%= flash[:notice] %></h3>
-			</div>
-		<% end %>
+		<div id="homepageContainer">
+			<!-- only render this div if there's something to show -->
+			<% if flash[:warning] or flash[:notice] %>
+			  <div id="flash">
+					<h3><%= flash[:notice] %></h3>
+				</div>
+			<% end %>
 		
-		<%= yield %>
+			<%= yield %>
 
-	</div>
-	<div id="shadow">
+		</div>
+		<div id="shadow">
 
-	</div>
+		</div>
+		<%= image_tag "shadow-bottom.gif" %>
 	</div>
 </body>
 </html>
