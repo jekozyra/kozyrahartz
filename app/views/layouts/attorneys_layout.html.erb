@@ -4,23 +4,14 @@
 <head>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="favicon.ico" />
 	<title>Kozyra & Hartz, LLC</title>
-	<%= stylesheet_link_tag "kh-main" %>
+	<%= stylesheet_link_tag "kh-newmain" %>
+	<%= javascript_include_tag "dropdown" %>
 	
 </head>
 
 <body>
-	<%= render :partial => "directory/header" %>
-	<div id="container">
 
-		<% if flash[:warning] or flash[:notice] %>
-		  <div id="flash">
-				<h3><%= flash[:notice] %></h3>
-			</div>
-		<% end %>
-		
-		<%= yield %>
-
-	</div>
 </body>
 </html>
