@@ -3,11 +3,12 @@ class NewsEntriesController < ApplicationController
   layout 'admin_layout'
   
   before_filter :authorize, :except => ['index', 'show']
+  before_filter :nav
   
   # GET /news_entries
   # GET /news_entries.xml
   def index
-    @news_entries = NewsEntry.all
+    @news_entries = NewsEntry.paginate(:per_page => 5, :page => params[:page], :order => "date DESC")
 
     respond_to do |format|
       format.html { render :layout => 'general_layout' } # index.html.erb
@@ -90,7 +91,7 @@ class NewsEntriesController < ApplicationController
   
   
   def news_list
-    @news_entries = NewsEntry.all
+    @news_entries = NewsEntry.find(:all, :order => ["date"] )
   end
   
 end

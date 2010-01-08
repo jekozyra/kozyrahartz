@@ -47,12 +47,21 @@
 					<% @practice_areas_nav.each do |practice_area| %>
 						<li><%= link_to practice_area.name, practice_area_url(practice_area.url)%></li>
 					<% end %>
-					</ul>			
+					</ul>
+				<% elsif @controller.controller_name == "news_entries" %>
+					<h3>News</h3>
+					<ul>
+					<% @news_entries_nav.each do |news_entry| %>
+						<li><%= link_to news_entry.date_string + ": " + news_entry.title, news_entry_url(news_entry)%></li>
+					<% end %>
+					</ul>							
 				<% end %>
 			</div>
 			<div id="mainCol">
-				<div id="bodyText">
-					<%= yield%>
+				<div id="bodyTextCol">
+					<div id="bodyText">
+						<%= yield%>
+					</div>
 				</div>
 			</div>
 		</div>

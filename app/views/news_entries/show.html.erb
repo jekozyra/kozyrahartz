@@ -1,13 +1,4 @@
-<p>
-  <b>Title:</b>
-  <%=h @news_entry.title %>
-</p>
-
-<p>
-  <b>Entry:</b>
-  <%=h @news_entry.entry %>
-</p>
-
-
-<%= link_to 'Edit', edit_news_entry_path(@news_entry) %> |
-<%= link_to 'Back', news_entries_path %>
+<h2><%= @news_entry.title %></h2>
+<p><%= @news_entry.date_string %></p>
+<br />
+<p><%= @news_entry.entry %></p>

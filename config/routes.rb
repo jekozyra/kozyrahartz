@@ -1,10 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :practice_areas
 
-  
-  map.attorneys_list 'admin/attorneys_list', :controller => 'attorneys', :action => 'attorneys_list'
-  map.news_list 'admin/news_list', :controller => 'news_entries', :action => 'news_list'
-  map.firm_list 'admin/firm_list', :controller => 'firms', :action => 'firm_list'
+  map.attorneys_list 'admin/attorneys', :controller => 'attorneys', :action => 'attorneys_list'
+  map.news_list 'admin/news', :controller => 'news_entries', :action => 'news_list'
+  map.firm_list 'admin/firm', :controller => 'firms', :action => 'firm_list'
+  map.practice_areas_list 'admin/practice_areas', :controller => 'practice_areas', :action => 'practice_areas_list'
   map.contact 'contact', :controller => 'directory', :action => 'contact'
   map.credits 'credits', :controller => 'directory', :action => 'credits'
   map.admin 'admin', :controller => 'directory', :action => 'admin'
@@ -13,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :news_entries, :as => "news"
   map.resources :attorneys
+  map.resources :practice_areas  
   map.resources :firms, :as => "firm"
   
   map.namespace :admin do |admin|

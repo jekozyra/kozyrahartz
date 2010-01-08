@@ -2,7 +2,7 @@
 	<%= image_tag "kh-logo-header.png" %>
 </div>
 
-<%= render :partial => "navmenu" %>
+<%= render :partial => "navmenu",  :locals => {:attorneys => @attorneys_nav, :firms => @firms_nav, :practice_areas => @practice_areas_nav} %>
 
 <div id="imageDiv">
 	<div class="imageRow">

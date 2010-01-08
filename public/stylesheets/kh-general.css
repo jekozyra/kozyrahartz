@@ -1,15 +1,15 @@
 *{ padding: 0; margin: 0; }
 html, body { 
 	height: 100%;
-	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;	
 }
 
 #wrapper{
 	min-height:600px;
 	background-color:#998B00;
 	border-bottom-style: solid;
-	border-width:5px;
-	border-color:#192328;	
+	border-width:2px;
+	border-color:#fff;	
 }
 
 #logoDiv{
@@ -51,6 +51,7 @@ html, body {
 	bottom:-30px;
 	height:38px;
 	margin-left:202px;
+	padding-left:40px;
 	width:auto;
 	border-top-style:solid;
 	border-bottom-style:solid;
@@ -61,18 +62,17 @@ html, body {
 
 #mainDiv{
 	height:100%;
+	min-height:463px;
+	background-color: #da9552;
 }
 
 #subnavCol{
 	min-height:463px;
 	position:absolute;
-	width:200px;
+	max-width:196px;
 	background-color: #da9552;
-	border-right-style:solid;
-	border-bottom-style:solid;
-	border-color:#fff;
-	border-width:2px;
 	list-style:square;
+	overflow-y:auto;
 }
 
 #subnavCol h3{
@@ -101,13 +101,19 @@ html, body {
 	background-color:#fff;
 	position:relative;
 	left:auto;
-	margin-left:202px;
+	margin-left:200px;
 	width:auto;
 	min-height:463px;
 	border-left-style:solid;
-	border-bottom-style:solid;
-	border-color:#fff #e9c8a6;
-	border-width:2px 40px;
+	border-color:#fff;
+	border-width:2px;
+}
+
+#bodyTextCol{
+	min-height:463px;
+	border-left-style:solid;
+	border-color:#e9c8a6;
+	border-width:40px;
 }
 
 #bodyText{
@@ -140,6 +146,9 @@ html, body {
 	width:100%;
 	min-width:100%;
 	height:40px;
+	border-top-style: solid;
+	border-width:5px;
+	border-color:#192328;
 }
 
 #footerTextLeft{
@@ -158,6 +167,9 @@ html, body {
 }
 #footerTextRight a:hover {
 	color:#fff;
+}
+.pagination{
+	font-size:12px;
 }
 .link-header{
 	background-color:#192328;
@@ -208,4 +220,18 @@ html, body {
 .dropdown a:hover {
 	text-decoration:underline;
 	color:#d49748;
+}
+
+
+#news-entry-short{
+	margin-bottom: 15px;
+	width:500px;
+}
+#news-entry-short h3{
+	font-weight:normal;
+	font-size:100%;
+}
+
+#attorney{
+	width:750px;
 }

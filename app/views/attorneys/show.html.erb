@@ -1,13 +1,13 @@
-<h2><%= @attorney.name %></h2>
-
-<p><%= @attorney.role %></p>
-<p><%= mail_to @attorney.email, @attorney.email, :class => 'email' %></p>
-
-
-<p>
-  <%= image_tag @attorney.photo.url(:normal) %>
-</p>
-
-<div id="attorneyBio">
-  <p><%= @attorney.biography %></p>
+<div id="attorney">
+	<h2><%= @attorney.name %></h2>
+		<div id="attorneyPicture">
+  	<%= image_tag @attorney.photo.url(:normal) %>
+	</div>
+	<div id="attorneyBio">
+		<p><%= @attorney.role %></p>
+		<p><%= mail_to @attorney.email, @attorney.email, :class => 'email' %></p>
+		<br />
+	</div>
+	<p><%= @attorney.biography %></p>
+	
 </div>

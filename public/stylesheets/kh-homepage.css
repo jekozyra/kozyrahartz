@@ -14,8 +14,8 @@ body{background-color:#B8C2C8;}
 }
 #homepageContainer {
 	position: absolute;
-	height: 550px; 
-	background-color: #fff; 
+	height: 551px; 
+	background-color: #192328; 
 	width: 897px; 
 	margin-left: 0px;
 	margin-bottom: -40px; 
@@ -53,6 +53,7 @@ body{background-color:#B8C2C8;}
 .dropdown {
 	padding-top: 5px;
 	float:left;
+	padding-left:5px;
 	font-size: 12px;
 }
 .dropdown dt {
@@ -93,6 +94,7 @@ body{background-color:#B8C2C8;}
 #imageDiv{
 	position: relative;
 	height: 390px;
+	background-color:#fff;
 }
 .imageRow{
 	position: relative;

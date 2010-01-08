@@ -1,54 +1,54 @@
-	<dl class="dropdown">
-	  <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
-			<%= link_to "FIRM", firms_url, :class => "link-header" %>
-		</dt>
-	  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
-	    <ul>
-				<% firms.each do |firm| %>
-					<li><%= link_to firm.title, firm_url(firm.url)%></li>
-				<% end %>
-	    </ul>
-	  </dd>
-	</dl>
+<dl class="dropdown">
+  <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
+		<%= link_to "FIRM", firms_url, :class => "link-header" %>
+	</dt>
+  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+    <ul>
+			<% firms.each do |firm| %>
+				<li><%= link_to firm.title, firm_url(firm.url)%></li>
+			<% end %>
+    </ul>
+  </dd>
+</dl>
 
-	<dl class="dropdown">
-	  <dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">
-			<%= link_to "ATTORNEYS", attorneys_url, :class => "link-header" %>
-		</dt>
-	  <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
-	    <ul>
-				<% attorneys.each do |attorney| %>
-					<li><%= link_to attorney.name, attorney_url(attorney.short_name)%></li>
-				<% end %>
-	    </ul>
-	  </dd>
-	</dl>
+<dl class="dropdown">
+  <dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">
+		<%= link_to "ATTORNEYS", attorneys_url, :class => "link-header" %>
+	</dt>
+  <dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
+    <ul>
+			<% attorneys.each do |attorney| %>
+				<li><%= link_to attorney.name, attorney_url(attorney.short_name)%></li>
+			<% end %>
+    </ul>
+  </dd>
+</dl>
+
+<dl class="dropdown">
+  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
+		<%= link_to "PRACTICE AREAS", practice_areas_url, :class => "link-header" %>
+	</dt>
+  <dd id="three-ddcontent" onmouseover="cancelHide('three')" onmouseout="ddMenu('three',-1)">
+    <ul>
+			<% practice_areas.each do |practice_area| %>
+				<li><%= link_to practice_area.name, practice_area_url(practice_area.url)%></li>
+			<% end %>
+    </ul>
+  </dd>
+</dl>	
+
+<dl class="dropdown">
+  <dt id="four-ddheader" onmouseover="ddMenu('four',1)" onmouseout="ddMenu('four',-1)">
+		<%= link_to "NEWS", news_entries_url, :class => "link-header" %>
+	</dt>
+  <dd id="four-ddcontent" onmouseover="cancelHide('four')" onmouseout="ddMenu('four',-1)">
+  </dd>
+</dl>	
 	
-	<dl class="dropdown">
-	  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
-			<%= link_to "PRACTICE AREAS", practice_areas_url, :class => "link-header" %>
-		</dt>
-	  <dd id="three-ddcontent" onmouseover="cancelHide('three')" onmouseout="ddMenu('three',-1)">
-	    <ul>
-				<% practice_areas.each do |practice_area| %>
-					<li><%= link_to practice_area.name, practice_area_url(practice_area.url)%></li>
-				<% end %>
-	    </ul>
-	  </dd>
-	</dl>	
-	
-	<dl class="dropdown">
-	  <dt id="four-ddheader" onmouseover="ddMenu('four',1)" onmouseout="ddMenu('four',-1)">
-			NEWS
-		</dt>
-	  <dd id="four-ddcontent" onmouseover="cancelHide('four')" onmouseout="ddMenu('four',-1)">
-	  </dd>
-	</dl>	
-		
-	<dl class="dropdown">
-	  <dt id="five-ddheader" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">
-			<%= link_to "CONTACT US", contact_url, :class => "link-header" %>
-		</dt>
-	</dl>
-	
-	<div style="clear:both"></div>
+<dl class="dropdown">
+  <dt id="five-ddheader" onmouseover="ddMenu('five',1)" onmouseout="ddMenu('five',-1)">
+		<%= link_to "CONTACT US", contact_url, :class => "link-header" %>
+	</dt>
+</dl>
+
+<div style="clear:both"></div>

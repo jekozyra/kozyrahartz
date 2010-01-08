@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
     @attorneys_nav = Attorney.find(:all)
     @firms_nav = Firm.find(:all)
     @practice_areas_nav = PracticeArea.find(:all)
+    @news_entries_nav = NewsEntry.find(:all, :limit => 10, :order => "date DESC")
   end
   
 end
