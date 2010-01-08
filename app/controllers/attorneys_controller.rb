@@ -76,7 +76,7 @@ class AttorneysController < ApplicationController
   # PUT /attorneys/1.xml
   def update
     @attorney = Attorney.find_by_short_name(params[:id])
-    @attorney.short_name = @attorney.name.gsub(' ', '').downcase
+    @attorney.short_name = @attorney.name.gsub(' ', '_').gsub(',', '').gsub('.', '').downcase
 
     respond_to do |format|
       if @attorney.update_attributes(params[:attorney])
