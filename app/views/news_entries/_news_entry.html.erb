@@ -1,0 +1,5 @@
+<div id="news-entry-short">
+	<h3><%= link_to news_entry.title, news_entry_path(news_entry) %></h3>
+	<p><%= news_entry.date_string %></p>
+	<p><%= truncate(news_entry.entry.gsub(/<\/?[^>]*>/, ""), :length => 270).gsub(/<\/?[^>]*>/, "") %>...</p>
+</div>
