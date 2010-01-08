@@ -58,7 +58,7 @@ class AttorneysController < ApplicationController
   # POST /attorneys.xml
   def create
     @attorney = Attorney.new(params[:attorney])
-    @attorney.short_name = @attorney.name.gsub(' ', '').downcase
+    @attorney.short_name = @attorney.name.gsub(' ', '_').gsub(',', '').gsub('.', '').downcase
 
     respond_to do |format|
       if @attorney.save
