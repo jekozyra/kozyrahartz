@@ -1,10 +1,18 @@
 class Attorney < ActiveRecord::Base
   
+=begin
   has_attached_file :photo, 
                     :styles => { :normal => "150x150>" },
                     :convert_options => { :all => '-strip -colorspace RGB' },
                     :url  => "/attorney_photos/:style/:basename.:extension",
                     :path => ":rails_root/public/attorney_photos/:style/:basename.:extension"
+=end  
+  
+  has_attached_file :photo, 
+                    :styles => { :normal => "150x150>" },
+                    :convert_options => { :all => '-strip -colorspace RGB' },
+                    :url  => "/attorney_photos/:style/:basename.:extension",
+                    :path => "/home/jekozyra/kozyrahartz/shared/attorney_photos/:style/:basename.:extension"
 
 
   
