@@ -11,12 +11,6 @@
   <dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">
 		<%= link_to "Manage Attorneys", attorneys_list_url, :class => "link-header" %>
 	</dt>
-</dl>
-
-<dl class="dropdown">
-  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
-		<%= link_to "Manage Users", admin_users_url, :class => "link-header" %>
-	</dt>
 </dl>	
 
 <dl class="dropdown">
@@ -30,5 +24,11 @@
 		<%= link_to "Manage News Items", news_list_url, :class => "link-header" %>
 	</dt>
 </dl>	
+
+<dl class="dropdown">
+  <dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">
+		<%= link_to "Manage Users", admin_users_url, :class => "link-header" %>
+	</dt>
+</dl>
 
 <div style="clear:both"></div>
