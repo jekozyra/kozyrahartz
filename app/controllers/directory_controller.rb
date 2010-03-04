@@ -30,19 +30,19 @@ class DirectoryController < ApplicationController
       redirect_to news_entries_url
     elsif params[:path].last == "contact.htm"
       redirect_to contact_url
-    elsif params[:path].last == "jahartz.htm"
+    elsif params[:path].last == "jahartz.html"
       @attorney = Attorney.find_by_short_name("judith_a_hartz")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "bkozyra.htm"
+    elsif params[:path].last == "bakozyra.html"
       @attorney = Attorney.find_by_short_name("barry_a_kozyra")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "lapeduto.htm"
+    elsif params[:path].last == "lapeduto.html"
       @attorney = Attorney.find_by_short_name("leonard_a_peduto_jr")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "bwbresnick.htm"
+    elsif params[:path].last == "bwbresnick.html"
       @attorney = Attorney.find_by_short_name("betsy_w_bresnick")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "rgadhok.htm"
+    elsif params[:path].last == "rgadhok.html"
       @attorney = Attorney.find_by_short_name("raj_gadhok")
       redirect_to attorney_url(@attorney)
     else
