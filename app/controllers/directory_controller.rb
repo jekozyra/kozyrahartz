@@ -30,22 +30,22 @@ class DirectoryController < ApplicationController
       redirect_to news_entries_url
     elsif params[:path].last == "contact.htm"
       redirect_to contact_url
-    elsif params[:path].last == "jahartz.html"
+    elsif params[:path].last == "jahartz.html" or params[:path].last == "jahartz.htm"
       @attorney = Attorney.find_by_short_name("judith_a_hartz")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "bakozyra.html"
+    elsif params[:path].last == "bakozyra.html" or params[:path].last == "bakozyra.htm"
       @attorney = Attorney.find_by_short_name("barry_a_kozyra")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "lapeduto.html"
+    elsif params[:path].last == "lapeduto.html" or params[:path].last == "lapeduto.htm"
       @attorney = Attorney.find_by_short_name("leonard_a_peduto_jr")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "bwbresnick.html"
+    elsif params[:path].last == "bwbresnick.html" or params[:path].last == "bwbresnick.htm"
       @attorney = Attorney.find_by_short_name("betsy_w_bresnick")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "rgadhok.html"
+    elsif params[:path].last == "rgadhok.html" or params[:path].last == "rgadhok.htm"
       @attorney = Attorney.find_by_short_name("raj_gadhok")
       redirect_to attorney_url(@attorney)
-    elsif params[:path].last == "reross.html"
+    elsif params[:path].last == "reross.html" or params[:path].last == "reross.htm"
       redirect_to attorneys_url
     else
       render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
@@ -54,21 +54,4 @@ class DirectoryController < ApplicationController
   end
   
 end
-
-=begin
-<xml xmlns:o="urn:schemas-microsoft-com:office:office">
- <o:MainFile HRef="../index.htm"/>
-
- <o:File HRef="recent_news.htm"/>
- <o:File HRef="contact.htm"/>
- <o:File HRef="attorneys.htm"/>
- <o:File HRef="disclaimer.htm"/>
- <o:File HRef="bakozyra.htm"/>
- <o:File HRef="jahartz.htm"/>
- <o:File HRef="rgadhok.htm"/>
- <o:File HRef="lapeduto.htm"/>
- <o:File HRef="bwbresnick.htm"/>
- <o:File HRef="reross.htm"/>
-</xml>
-=end
 
