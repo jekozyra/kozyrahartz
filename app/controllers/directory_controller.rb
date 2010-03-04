@@ -45,6 +45,8 @@ class DirectoryController < ApplicationController
     elsif params[:path].last == "rgadhok.html"
       @attorney = Attorney.find_by_short_name("raj_gadhok")
       redirect_to attorney_url(@attorney)
+    elsif params[:path].last == "reross.html"
+      redirect_to attorneys_url
     else
       render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
     end
