@@ -24,4 +24,6 @@ class ApplicationController < ActionController::Base
     @news_entries_nav = NewsEntry.find(:all, :limit => 20, :order => "date DESC")
   end
   
+  
+  
 end
