@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   
   def nav
     @attorneys_nav = Attorney.find(:all)
-    @firms_nav = Firm.find(:all)
+    @firm = Firm.find(:first)
     @practice_areas_nav = PracticeArea.find(:all)
     @news_entries_nav = NewsEntry.find(:all, :limit => 20, :order => "date DESC")
   end

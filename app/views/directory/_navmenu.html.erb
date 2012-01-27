@@ -1,14 +1,7 @@
 <dl class="dropdown">
   <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
-		<%= link_to "FIRM", firms_url, :class => "link-header" %>
+		<%= link_to "FIRM OVERVIEW", firm.url, :class => "link-header" %>
 	</dt>
-  <dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
-    <ul>
-			<% firms.each do |firm| %>
-				<li><%= link_to firm.title, firm_url(firm.url)%></li>
-			<% end %>
-    </ul>
-  </dd>
 </dl>
 
 <dl class="dropdown">
