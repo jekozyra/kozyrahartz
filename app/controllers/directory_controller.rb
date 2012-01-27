@@ -5,7 +5,7 @@ class DirectoryController < ApplicationController
   
   def homepage
     @attorneys = Attorney.find(:all)
-    @firm = Firm.find(:first)
+    @firms_nav = Firm.find(:all)
     @practice_areas = PracticeArea.find(:all)
     render :layout => "homepage_layout"
   end
