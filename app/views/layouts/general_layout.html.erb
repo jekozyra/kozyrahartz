@@ -21,7 +21,7 @@
 			<div id="fillerCell">
 			</div>
 			<div id="nav">
-				<%= render :partial => 'shared/nav', :locals => {:attorneys => @attorneys_nav, :firm => @firm, :practice_areas => @practice_areas_nav} %>
+				<%= render :partial => 'shared/nav', :locals => {:attorneys => @attorneys_nav, :firms => @firms_nav, :practice_areas => @practice_areas_nav} %>
 			</div>
 		</div>
 		
@@ -69,13 +69,13 @@
 
 	<div id="footer">
 		<div id="footerTextLeft">
-			&copy; 2012 Kozyra &amp; Hartz, LLC
+			&copy; 2010 Kozyra &amp; Hartz, LLC
 		</div>
 		<div id="footerTextRight">
 			<%= link_to "home", root_url %>&nbsp;:
+			<%= link_to "site map", root_url %>&nbsp;:
 			<%= link_to "credits", credits_url %>&nbsp;:
-			<%= link_to "contact", contact_url %>&nbsp;:
-			<%= link_to "driving directions", "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=75+eisenhower+parkway&sll=37.0625,-95.677068&sspn=36.726391,79.013672&ie=UTF8&hq=&hnear=75+Eisenhower+Pkwy,+Roseland,+Essex,+New+Jersey+07068&ll=40.823552,-74.326372&spn=0.008573,0.01929&z=16&iwloc=A&iwstate1=dir" %>
+			<%= link_to "contact", contact_url %>
 		</div>
 	</div>
 </body>
