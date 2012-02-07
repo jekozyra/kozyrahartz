@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.admin 'admin', :controller => 'directory', :action => 'admin'
   map.login 'login', :controller => 'admin/users', :action => 'login'
   map.logout 'logout', :controller => 'admin/users', :action => 'logout'
-  map.firm_overview 'firm_overview', :controller => "directory", :action => "firm_overview"
+  map.firm_overview 'overview', :controller => "directory", :action => "firm_overview"
   
   map.resources :news_entries, :as => "news"
   map.resources :attorneys
