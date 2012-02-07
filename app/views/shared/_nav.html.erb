@@ -1,6 +1,6 @@
 <dl class="dropdown">
   <dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">
-		<%= link_to "FIRM OVERVIEW", firm_overview_url, :class => "link-header" %>
+		<%= link_to "FIRM OVERVIEW", {:controller => "directory", :action => "firm_overview"}, :class => "link-header" %>
 	</dt>
 </dl>
 
