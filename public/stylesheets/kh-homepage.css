@@ -1,7 +1,7 @@
 *{ padding: 0; margin: 0; }
 html, body { height: 100%; }
 * html #container { height: 100%; }
-body{background-color:#B8C2C8;}
+body{background-color:#D3DEE5;}
 
 #wrapper{
 	position: relative;
@@ -10,7 +10,7 @@ body{background-color:#B8C2C8;}
 	width: 910px; 
 	margin: auto;
 	margin-top: 20px;
-	background-image:url('/images/shadow.gif');
+	background-image:url('/images/shadow2.gif');
 }
 #homepageContainer {
 	position: absolute;

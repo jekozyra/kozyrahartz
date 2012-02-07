@@ -53,5 +53,10 @@ class DirectoryController < ApplicationController
     
   end
   
+  
+  def firm_overview
+    render :layout => "general_layout"
+  end
+  
 end
 
