@@ -57,6 +57,11 @@ class AttorneysController < ApplicationController
   # POST /attorneys
   # POST /attorneys.xml
   def create
+    
+    if params[:attorney][:photo].nil? or params[:attorney][:photo] == ""
+      params[:attorney][:skip_photo] = true
+    end
+    
     @attorney = Attorney.new(params[:attorney])
     @attorney.short_name = @attorney.name.gsub(' ', '_').gsub(',', '').gsub('.', '').downcase
 
