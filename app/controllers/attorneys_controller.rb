@@ -13,6 +13,7 @@ class AttorneysController < ApplicationController
     @attorneys << Attorney.find(:all, :conditions => ["role = ?", "Of Counsel"])
     @attorneys << Attorney.find(:all, :conditions => ["role = ?", "Associate"])
     @attorneys << Attorney.find(:all, :conditions => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
+    @attorneys.flatten!
     
     respond_to do |format|
       format.html {render :layout => 'general_layout' }# index.html.erb
