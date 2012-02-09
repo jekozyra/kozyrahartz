@@ -57,9 +57,9 @@ class AttorneysController < ApplicationController
   # POST /attorneys
   # POST /attorneys.xml
   def create
-    
-    if params[:attorney][:photo].nil? or params[:attorney][:photo] == ""
-      params[:attorney][:skip_photo] = true
+
+    unless params[:attorney][:photo].nil? or params[:attorney][:photo] == ""
+      params[:attorney][:photo_present] = true
     end
     
     @attorney = Attorney.new(params[:attorney])

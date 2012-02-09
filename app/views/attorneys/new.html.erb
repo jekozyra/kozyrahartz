@@ -27,6 +27,8 @@
 		    <%= f.label :photo %>
 		    <%= f.file_field :photo %>
 		  </div>
+		
+			<%= f.hidden_field :photo_present, :value => 0 %>
 			
 		  <div class="buttonHolder">
 		    <%= f.submit 'Create' %>
