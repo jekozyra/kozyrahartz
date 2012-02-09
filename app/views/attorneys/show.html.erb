@@ -1,7 +1,9 @@
 <div id="attorney">
 	<h2><%= @attorney.name %></h2>
 		<div id="attorneyPicture">
-  	<%= image_tag @attorney.photo.url(:normal) %>
+	<% unless @attorney.photo.url(:normal) == "/photos/normal/missing.png" %>
+  		<%= image_tag @attorney.photo.url(:normal) %>
+	<% end %>
 	</div>
 	<div id="attorneyBio">
 		<p><%= @attorney.role %></p>
