@@ -14,8 +14,6 @@ class AttorneysController < ApplicationController
     @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Associate"])
     @attorneys << Attorneys.find(:all, :condition => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
     
-    @attorneys = Attorney.all
-
     respond_to do |format|
       format.html {render :layout => 'general_layout' }# index.html.erb
       format.xml  { render :xml => @attorneys }
