@@ -9,10 +9,10 @@ class AttorneysController < ApplicationController
   # GET /attorneys.xml
   def index
     @attorneys = []
-    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Member"])
-    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Of Counsel"])
-    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Associate"])
-    @attorneys << Attorneys.find(:all, :condition => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
+    @attorneys << Attorney.find(:all, :conditions => ["role = ?", "Member"])
+    @attorneys << Attorney.find(:all, :conditions => ["role = ?", "Of Counsel"])
+    @attorneys << Attorney.find(:all, :conditions => ["role = ?", "Associate"])
+    @attorneys << Attorney.find(:all, :conditions => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
     
     respond_to do |format|
       format.html {render :layout => 'general_layout' }# index.html.erb
