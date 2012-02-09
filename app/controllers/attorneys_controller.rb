@@ -8,6 +8,12 @@ class AttorneysController < ApplicationController
   # GET /attorneys
   # GET /attorneys.xml
   def index
+    @attorneys = []
+    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Member"])
+    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Of Counsel"])
+    @attorneys << Attorneys.find(:all, :condition => ["role = ?", "Associate"])
+    @attorneys << Attorneys.find(:all, :condition => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
+    
     @attorneys = Attorney.all
 
     respond_to do |format|
