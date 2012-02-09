@@ -18,7 +18,12 @@ class ApplicationController < ActionController::Base
   end
   
   def nav
-    @attorneys_nav = Attorney.find(:all)
+    @attorneys_nav = []
+    @attorneys_nav << Attorney.find(:all, :conditions => ["role = ?", "Member"])
+    @attorneys_nav << Attorney.find(:all, :conditions => ["role = ?", "Of Counsel"])
+    @attorneys_nav << Attorney.find(:all, :conditions => ["role = ?", "Associate"])
+    @attorneys_nav << Attorney.find(:all, :conditions => ["role != ? AND role != ? AND role != ?", "Member", "Of Counsel", "Associate"])
+    @attorneys_nav.flatten!
     @firms = Firm.find(:all)
     @practice_areas_nav = PracticeArea.find(:all)
     @news_entries_nav = NewsEntry.find(:all, :limit => 20, :order => "date DESC")
